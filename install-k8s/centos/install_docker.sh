@@ -35,3 +35,7 @@ mkdir -p /etc/systemd/system/docker.service.d
 # Restart Docker
 systemctl daemon-reload
 systemctl restart docker
+
+# non-root user can use docker commands
+groupadd docker
+usermod -aG docker <user_name>
