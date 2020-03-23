@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+
+metadata:
+    name: frontend-svc2
+
+spec:
+    type: NodePort
+    selector:
+        app: guestbook2
+        tier: frontend2
+    ports:
+        - nodePort: 31890
+          port: 80
+          targetPort: 80
