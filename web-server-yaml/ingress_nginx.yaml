@@ -9,7 +9,6 @@ spec:
     - host: xuran.com
       http:
         paths:
-          - path: /guestbook
-            backend:
+          - backend:
               serviceName: frontend-svc
               servicePort: 80
